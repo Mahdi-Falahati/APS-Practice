@@ -1,0 +1,135 @@
+header {
+    border-bottom: 1px solid #777;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    font-weight: bold;
+    width: 100px;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background: orangered;
+    transform: scale(0, 0);
+    transition: all 1s cubic-bezier(0, .97, 1, .32);
+}
+
+header nav ul li a:hover::after {
+    transform: scale(1, 1);
+}
+
+header nav ul li a:hover {
+    color: gray;
+}
+
+/* end of header */
+
+.btn__custom {
+    position: relative;
+    border-radius: 20px;
+}
+
+.btn__custom::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: 0%;
+    background: rgb(20, 0, 47);
+    opacity: .3;
+    transition: all 1s;
+    transform: scale(0, 1);
+}
+
+.btn__custom:hover::before {
+    border-radius: 20px;
+    transform: scale(1, 1);
+}
+
+/* end of btn slide */
+
+.card{
+    width: 18rem;
+}
+
+.card > img{
+    height: 200px;
+}
+
+/* end of cards */
+.line {
+    height: 20px;
+    flex-grow: 2;
+    border-radius: 20px;
+}
+
+.line+h3 {
+    width: 150px;
+    text-align: center;
+}
+
+/* end of line title */
+
+.card_about {
+    width: 60vw;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px #999;
+}
+
+.card_about>h3 {
+    text-align: center;
+    border-bottom: 1px solid springgreen;
+    padding-bottom: 20px;
+}
+
+.card_about>p {
+    text-align: center;
+}
+
+@media screen and (max-width:992px) {
+    .card_about {
+        width: 90%;
+    }
+}
+
+footer {
+    background: rgb(11, 1, 26);
+    color: rgb(255, 255, 255);
+    padding: 50px 0px 40px 0px;
+}
+
+.about-us p{
+    opacity: .8;
+    font-size: 13px;
+}
+
+.social-media p{
+    font-size: 12px;
+    opacity: .8;
+    text-align: right;
+}
+
+@media screen and (max-width:768px) {
+    .social-media{
+        margin-top: 50px;
+    }
+}
