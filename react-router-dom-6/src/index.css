@@ -1,0 +1,53 @@
+header {
+  display: block;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-style: italic;
+}
+a {
+  display: inline-block;
+  padding: 10px;
+  margin: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  color: orangered;
+}
+
+
+button{
+    position: relative;
+    padding: 5px;
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 10px;
+}
+
+button::before{
+    border-radius: 10px ;
+    cursor: pointer;
+    content: "";
+    background: rgba(73, 1, 73, 0.404);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    transform: scale(0,1);
+    transition: all 1s;
+}
+
+button:hover::before{
+    transform: scale(1,1);
+}
+
+.p404{
+  text-align: center;
+  background: orangered;
+  color: #fff;
+  letter-spacing: 3px;
+  border-radius: 20px;
+}
